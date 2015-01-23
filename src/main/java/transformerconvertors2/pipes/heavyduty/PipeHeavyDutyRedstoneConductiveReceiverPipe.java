@@ -10,10 +10,10 @@ import core.common.resources.CoreEnums.LoggerEnum;
 import core.helpers.LoggerHelper;
 import core.helpers.TileEntityHelper;
 import core.helpers.WorldHelper;
+import core.utilities.Coordinates;
 import net.minecraft.item.Item;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.ChunkCoordinates;
 import net.minecraftforge.common.util.ForgeDirection;
 import transformerconvertors2.TransformerConvertors2;
 import transformerconvertors2.pipes.PipeBase;
@@ -44,7 +44,7 @@ public class PipeHeavyDutyRedstoneConductiveReceiverPipe extends PipeBase implem
      */
     @Override
     public int receiveEnergy(ForgeDirection from, int maxReceive, boolean simulate) {
-        if (TileEntityHelper.getTileEntityInDirection(getWorld(), new ChunkCoordinates(getContainer().xCoord, getContainer().yCoord, getContainer().zCoord), from) instanceof IEnergyHandler) {
+        if (TileEntityHelper.getTileEntityInDirection(getWorld(), new Coordinates(getContainer().xCoord, getContainer().yCoord, getContainer().zCoord), from) instanceof IEnergyHandler) {
             return battery.receiveEnergy(maxReceive, simulate);
         }
         return maxReceive;

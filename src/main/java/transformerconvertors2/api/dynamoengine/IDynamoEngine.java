@@ -9,6 +9,9 @@ import cpw.mods.fml.relauncher.SideOnly;
 public interface IDynamoEngine {
 
     @SideOnly(Side.CLIENT)
+    String getDynamoGearTexture();
+
+    @SideOnly(Side.CLIENT)
 	String getDynamoTexture();
 
     @SideOnly(Side.CLIENT)

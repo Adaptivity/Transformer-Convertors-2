@@ -60,7 +60,7 @@ public final class TransformerConvertors2Metadata implements IMetadata {
 
     @Override
     public String getModID() {
-        return ChatHelper.colourString(EnumChatFormatting.AQUA, ConvertorResources.TC2_MODID);
+        return ChatHelper.colourString(EnumChatFormatting.AQUA, ConvertorResources.TC2_MOD_ID);
     }
 
     @Override

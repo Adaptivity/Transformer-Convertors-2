@@ -33,16 +33,16 @@ import transformerconvertors2.utilities.ConvertorsEventHandler;
  * https://bitbucket.org/master801/transformer-convertors-2/
  * @author Master801
  */
-@Mod(modid = ConvertorResources.TC2_MODID, name = ConvertorResources.TC2_NAME, version = ConvertorResources.TC2_VERSION, dependencies = ConvertorResources.TC2_DEPENDENCIES)
+@Mod(modid = ConvertorResources.TC2_MOD_ID, name = ConvertorResources.TC2_NAME, version = ConvertorResources.TC2_VERSION, dependencies = ConvertorResources.TC2_DEPENDENCIES)
 public final class TransformerConvertors2 implements IMod {
 
-    @Instance(ConvertorResources.TC2_MODID)
+    @Instance(ConvertorResources.TC2_MOD_ID)
     public static IMod instance;
 
-    @SidedProxy(serverSide = ConvertorResources.TC2_PROXY_SERVER, clientSide =  ConvertorResources.TC2_PROXY_CLIENT, modId = ConvertorResources.TC2_MODID)
+    @SidedProxy(serverSide = ConvertorResources.TC2_PROXY_SERVER, clientSide =  ConvertorResources.TC2_PROXY_CLIENT, modId = ConvertorResources.TC2_MOD_ID)
     public static IProxy proxy;
 
-    @Metadata(ConvertorResources.TC2_MODID)
+    @Metadata(ConvertorResources.TC2_MOD_ID)
     public static ModMetadata metadata;
 
     @EventHandler
@@ -79,7 +79,7 @@ public final class TransformerConvertors2 implements IMod {
 
     @Override
     public String getModID() {
-        return ConvertorResources.TC2_MODID;
+        return ConvertorResources.TC2_MOD_ID;
     }
 
     @Override

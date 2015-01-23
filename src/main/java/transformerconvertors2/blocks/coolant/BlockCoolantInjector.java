@@ -5,6 +5,7 @@ import core.api.tileentity.coolant.ICoolantInjector.InjectorTypes;
 import core.api.tileentity.coolant.ICoolantIntake;
 import core.block.BlockCoreBase;
 import core.helpers.TileEntityHelper;
+import core.utilities.Coordinates;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
@@ -12,7 +13,6 @@ import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.TextureMap;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
 import transformerconvertors2.common.resources.ConvertorResources;
@@ -49,7 +49,7 @@ public class BlockCoolantInjector extends BlockCoreBase {
     public void onNeighborBlockChange(World world, int xCoord, int yCoord, int zCoord, Block block) {
         TileEntity tile = world.getTileEntity(xCoord, yCoord, zCoord);
         for(ForgeDirection direction : ForgeDirection.VALID_DIRECTIONS) {
-            Block gotBlock = TileEntityHelper.getBlockInDirection(world, new ChunkCoordinates(xCoord, yCoord, zCoord), direction);
+            Block gotBlock = TileEntityHelper.getBlockInDirection(world, new Coordinates(xCoord, yCoord, zCoord), direction);
             if (gotBlock == block) {
                 if (block instanceof ITileEntityProvider) {
                     ITileEntityProvider provider = (ITileEntityProvider)block;

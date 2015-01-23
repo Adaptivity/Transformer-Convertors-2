@@ -78,7 +78,10 @@ public abstract class TileEntityDynamoEngineConvertorBase extends TileEntityCore
     @Override
     @SideOnly(Side.CLIENT)
     public String getDynamoChamberTexture() {
-        return "/custom_resources/textures/models/dynamo_engine/chamber/Chamber.png";
+        if (!doesUseResourceLocation()) {
+            return "/custom_resources/textures/models/dynamo_engine/chamber/Chamber.png";
+        }
+        return null;
     }
 
     @Override
@@ -260,6 +263,15 @@ public abstract class TileEntityDynamoEngineConvertorBase extends TileEntityCore
             energyStage = RandomHelper.convertIntegerToByte(3);
         }
         TileEntityHelper.markBlockForUpdate(this);
+    }
+
+    @Override
+    @SideOnly(Side.CLIENT)
+    public String getDynamoGearTexture() {
+        if (!doesUseResourceLocation()) {
+            return "";//TODO
+        }
+        return null;
     }
 
 }

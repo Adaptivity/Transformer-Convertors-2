@@ -31,7 +31,7 @@ public class ItemFragment extends ItemCoreBase {
     @SideOnly(Side.CLIENT)
     protected void registerIcons(TextureMap itemMap) {
         for(int i = 0; i < ItemFragment.FRAGMENT_NAMES.length; i++) {
-            ItemFragment.FRAGMENT_ICONS[i] = itemMap.registerIcon(new ResourceLocation(ConvertorResources.TC2_MODID, "fragments/" + ItemFragment.FRAGMENT_NAMES[i]).toString());
+            ItemFragment.FRAGMENT_ICONS[i] = itemMap.registerIcon(new ResourceLocation(ConvertorResources.TC2_MOD_ID, "fragments/" + ItemFragment.FRAGMENT_NAMES[i]).toString());
         }
     }
 

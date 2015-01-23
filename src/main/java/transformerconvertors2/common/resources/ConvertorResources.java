@@ -28,13 +28,13 @@ import transformerconvertors2.utilities.Utilities;
 
 public final class ConvertorResources {
 
-    public static final String TC2_MODID = "TC2";
+    public static final String TC2_MOD_ID = "TC2";
     public static final String TC2_NAME = "Transformer Convertors 2";
     public static final String TC2_VERSION = "@VERSION@";
     public static final String TC2_DEPENDENCIES = "required-after:" + CoreResources.CORE_LIBRARY_MOD_ID + "; required-after:CoFHCore; after:BuildCraft|Energy; after:Cogs; after:TConstruct; after:BiomesOPlenty";
     public static final String TC2_PROXY_SERVER = "transformerconvertors2.proxies.ConvertorsCommonProxy";
     public static final String TC2_PROXY_CLIENT = "transformerconvertors2.proxies.ConvertorsClientProxy";
-    public static final String TC2_CHANNEL = ConvertorResources.TC2_MODID;
+    public static final String TC2_CHANNEL = ConvertorResources.TC2_MOD_ID;
     public static final IConfigFile TC2_CONFIG_FILE = ConfigFileHelper.createNewConfigFile(TransformerConvertors2.instance, "Transformer Convertors 2", "\n Convert energies to other energies!\n Plus random junk.\n");
     public static final CreativeTabs TC2_CREATIVE_TAB = new CreativeTabs("transformerConvertors2.name") {
 
@@ -51,7 +51,7 @@ public final class ConvertorResources {
     };
 
     public static FMLEventChannel getConvertorsEventChannel() {
-        return NetworkHelper.getEventChannel(ConvertorResources.TC2_MODID);
+        return NetworkHelper.getEventChannel(ConvertorResources.TC2_MOD_ID);
     }
 
     public static final class ConvertorsItemList {
