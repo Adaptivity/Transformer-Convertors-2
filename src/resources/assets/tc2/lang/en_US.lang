@@ -1,0 +1,11 @@
+cogEngine.modifier.speed=Speed Modifier
+cogEngine.modifier.strength=Strength Modifier
+item.stoneCogwheel.name=Stone Cogwheel
+item.stoneCogwheelDetector.name=Detector Stone Cogwheel
+item.stoneCogwheelSwitch.name=Switch Stone Cogwheel
+item.tinCogwheel.name=Tin Cogwheel
+item.tinCogwheelDetector.name=Detector Tin Cogwheel
+item.tinCogwheelSwitch.name=Switch Tin Cogwheel
+item.fragment.nickel.name=Nickel Fragment
+item.fragment.platinum.name=Platinum Fragment
+item.fragment.mithril.name=Mithril Fragment
